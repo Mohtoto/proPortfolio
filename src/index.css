@@ -7,7 +7,7 @@
   font-family: 'Avant Garde Book BT';
   font-style: normal;
   font-weight: normal;
-  src: url('../public/fonts/AVGARDD_2.woff') format('woff');
+  src: url('../fonts/AVGARDD_2.woff') format('woff');
 }
 
 :root{
@@ -24,7 +24,8 @@ html{
 
 body{
 
-  /* background-color: #010101 */
+  background-color: whitesmoke;
+  overflow-x: hidden;
   
 
 }
@@ -87,10 +88,10 @@ body{
   text-align: center;
  
 }
-span{
+/* span{
   font-family: 'Roboto Mono', monospace !important;
 
-}
+} */
 
 .list1{
 
@@ -225,6 +226,35 @@ span{
   right: 7px;
   animation: scroll 1000ms infinite alternate-reverse ;
 }
+
+.content-h3:before{
+
+  content: "<h1>";
+  margin-bottom: 5px;
+}
+.content-h3:after{
+
+  content: "<h1>";
+  margin-bottom: 5px;
+}
+.line{
+
+  position: relative;
+}
+
+.line:after{
+
+  opacity: 0.3;
+  content: '';
+  width: 0;
+  height: 65%;
+  position: absolute;
+  background-color: white;
+  border: 0.1px solid white;
+  bottom: 17%;
+  left: 17px;
+}
+
 
 @keyframes scroll {
 

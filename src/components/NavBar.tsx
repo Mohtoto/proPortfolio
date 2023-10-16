@@ -1,14 +1,10 @@
-import { AnimatePresence } from "framer-motion";
-import React, { useState } from "react";
-import { Burger } from "./Burger";
-import Menu from "./Menu";
-
+import useMediaQuery from "../hooks/UseMediaQuery";
+import { Nav } from "./Nav";
 import { SideBar } from "./Sidebar";
 
 export default function NavBar() {
-  return (
+  const aboveMedia = useMediaQuery("(min-width: 767px)");
 
-      <SideBar />
-  
-  );
+
+  return aboveMedia ? <SideBar /> : <Nav />;
 }

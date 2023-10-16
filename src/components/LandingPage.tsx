@@ -2,60 +2,62 @@ import { useState } from "react";
 import useMediaQuery from "../hooks/UseMediaQuery";
 import useMousePosition from "../hooks/UseMousePosition";
 import { H1 } from "../shared/H1";
-import { Nav } from "./Nav";
 import NavBar from "./NavBar";
-import { SkillsSection } from "./SkillsSection";
 import { motion } from "framer-motion";
 import styles from "../../scssModules/Mask.module.scss";
 import Project from "./Project";
-import gam from '../../public/gam.png'
-import geegle from '../../public/geegle.png'
-import lib from '../../public/lib.png'
-import nbakr from '../../public/nbakr.png'
-import tweet from '../../public/tweet.png'
-
+import gam from "../../public/gam.png";
+import geegle from "../../public/geegle.png";
+import lib from "../../public/lib.png";
+import nbakr from "../../public/nbakr.png";
+import tweet from "../../public/tweet.png";
+import { skillsInfo } from "../../data";
+import Skill from "./Skill";
 
 const LandingPage = () => {
-
   interface Projects {
-
-    title1:string;
+    title1: string;
     title2: string;
     src: string;
     link: string;
   }
 
+  // interface Skillsmap {
+  //   icon: string;
+  //   title: string;
+  //   description: string;
+  // }
 
   const projects: Projects[] = [
     {
       title1: "Gmail",
       title2: "Clone",
       src: gam,
-      link:'https://jmaill.netlify.app/'
+      link: "https://jmaill.netlify.app/",
     },
     {
       title1: "E-com",
       title2: "Library",
       src: lib,
-      link:'https://library-ecom.netlify.app/'
+      link: "https://library-ecom.netlify.app/",
     },
     {
       title1: "Google",
       title2: "Clone",
       src: geegle,
-      link:'https://geegle.netlify.app/'
+      link: "https://geegle.netlify.app/",
     },
     {
       title1: "E-",
       title2: "Portfoilio",
       src: nbakr,
-      link:'https://bakr-zeyad.netlify.app/'
+      link: "https://bakr-zeyad.netlify.app/",
     },
     {
       title1: "Twitter",
       title2: "Clone",
       src: tweet,
-      link:'https://tweeterr.netlify.app/'
+      link: "https://tweeterr.netlify.app/",
     },
   ];
   const aboveMedia = useMediaQuery("(min-width: 767px)");
@@ -69,7 +71,6 @@ const LandingPage = () => {
   return (
     <main>
       <section id="sectionHome" className="h-[100vh] relative">
-        {/* <Nav /> */}
         <NavBar />
 
         <div className="row">
@@ -91,7 +92,7 @@ const LandingPage = () => {
         </div>
 
         <a
-          href="#TeckStack"
+          href="#ABOUTME"
           className=" w-[25px] h-[50px] rounded-full absolute bottom-8 left-[50%] border-solid border-2 border-[#A05B3B]"
         >
           <div className="scroll__icon"></div>
@@ -134,13 +135,28 @@ const LandingPage = () => {
 
       <section id="PROJECTS">
         <div className="row">
-          <div className='h-screen flex items-center justify-center'>
-            <div className='w-[70%]'>
+          <div className="h-screen flex items-center justify-center mt-12">
+            <div className="w-[70%]">
               <p>Featured Work</p>
               {projects.map((project) => {
                 return <Project project={project} />;
               })}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Skills" className="bg-[#1b191d]">
+        <div className="row">
+          <div className="flex items-center justify-center">
+            {skillsInfo.map(({ title, description , icon2 }, index) => (
+              <Skill
+                key={index}
+                title={title}
+                description={description}
+                icon2={icon2}
+              />
+            ))}
           </div>
         </div>
       </section>

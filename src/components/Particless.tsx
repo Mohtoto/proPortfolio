@@ -92,8 +92,6 @@ const Particless= () => {
     
     }}
 
-    height="50vh"
-    width="50vw"
 />
   );
 
