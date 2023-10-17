@@ -22,11 +22,14 @@ const LandingPage = () => {
     link: string;
   }
 
-  // interface Skillsmap {
-  //   icon: string;
-  //   title: string;
-  //   description: string;
-  // }
+
+
+  interface Skillsmap {
+    icon: any;
+    title: string;
+    description: string;
+    icon2: any
+  }
 
   const projects: Projects[] = [
     {
@@ -70,7 +73,7 @@ const LandingPage = () => {
 
   return (
     <main>
-      <section id="sectionHome" className="h-[100vh] relative">
+      <section id="HOME" className="h-[100vh] relative">
         <NavBar />
 
         <div className="row">
@@ -93,7 +96,7 @@ const LandingPage = () => {
 
         <a
           href="#ABOUTME"
-          className=" w-[25px] h-[50px] rounded-full absolute bottom-8 left-[50%] border-solid border-2 border-[#A05B3B]"
+          className=" w-[25px] h-[50px] rounded-full absolute bottom-8 left-[50%] border-solid border-2 border-[#ec4e39]"
         >
           <div className="scroll__icon"></div>
         </a>
@@ -138,8 +141,8 @@ const LandingPage = () => {
           <div className="h-screen flex items-center justify-center mt-12">
             <div className="w-[70%]">
               <p>Featured Work</p>
-              {projects.map((project) => {
-                return <Project project={project} />;
+              {projects.map((project, index) => {
+                return <Project project={project} key={index} />;
               })}
             </div>
           </div>
@@ -149,12 +152,13 @@ const LandingPage = () => {
       <section id="Skills" className="bg-[#1b191d]">
         <div className="row">
           <div className="flex items-center justify-center">
-            {skillsInfo.map(({ title, description , icon2 }, index) => (
+            {skillsInfo.map((items : Skillsmap , index) => (
               <Skill
                 key={index}
-                title={title}
-                description={description}
-                icon2={icon2}
+                title={items.title}
+                description={items.description}
+                icon2={items.icon2}
+                icon={items.icon}
               />
             ))}
           </div>

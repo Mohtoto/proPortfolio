@@ -22,6 +22,8 @@ export const SideBar = () => {
       className="flex flex-col items-center justify-center bg-white text-black fixed top-0 left-0 w-[400px] lg: bottom-0 z-10"
       animate={open ? "open" : "closed"}
       variants={variants}
+
+     
     >
       <div className=" bg-white">
         <Links />

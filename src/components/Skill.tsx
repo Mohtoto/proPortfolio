@@ -2,20 +2,21 @@ import * as animationData from "../../react.json"; // Import your animation JSON
 import LottiePlayer from "react-lottie-player";
 
 interface SkillProps {
+  icon: any
   title: string;
   description: string;
   icon2: any;
 }
 
-const Skill = ({ title, description, icon2 }: SkillProps) => {
+const Skill = ({ title, description, icon2 , icon}: SkillProps) => {
   return (
     <div className="border-2 border-white text-white p-8 mt-11 flex flex-col gap-4 items-center">
       <div className="flex items-center justify-start">
         <LottiePlayer
-          animationData={animationData}
+          animationData={icon}
           loop
           play
-          className="lg:w-[50px] w-[350px]"
+          className="lg:w-[100px] w-[350px]"
         />
         <h2>{title}</h2>
       </div>

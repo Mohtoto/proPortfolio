@@ -2,7 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import LandingPage from "./components/LandingPage";
 import PreLoader from "./components/PreLoader";
-
+import { BrowserRouter as Router } from "react-router-dom";
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,12 +24,15 @@ const App = () => {
 
   return (
     <>
-      <AnimatePresence>
-        <LandingPage />
-        
-      </AnimatePresence>
+      <Router>
+        <AnimatePresence>
+          <LandingPage />
+        </AnimatePresence>
 
-      <AnimatePresence mode="wait">{isLoading && <PreLoader />}</AnimatePresence>
+        <AnimatePresence mode="wait">
+          {isLoading && <PreLoader />}
+        </AnimatePresence>
+      </Router>
     </>
   );
 };
