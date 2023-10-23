@@ -13,6 +13,7 @@ import nbakr from "../../public/nbakr.png";
 import tweet from "../../public/tweet.png";
 import { skillsInfo } from "../../data";
 import Skill from "./Skill";
+import { teckStack } from "../../data";
 
 const LandingPage = () => {
   interface Projects {
@@ -22,13 +23,11 @@ const LandingPage = () => {
     link: string;
   }
 
-
-
   interface Skillsmap {
     icon: any;
     title: string;
     description: string;
-    icon2: any
+    icon2: any;
   }
 
   const projects: Projects[] = [
@@ -69,7 +68,17 @@ const LandingPage = () => {
 
   const { x, y } = useMousePosition();
 
-  const size = isHover ? 400 : 40;
+  const size = isHover ? 600 : 40;
+
+  const rows = [];
+  let start = 0;
+  let numIcons = 1;
+
+  while (start < teckStack.length) {
+    rows.push(teckStack.slice(start, start + numIcons));
+    start += numIcons;
+    numIcons++;
+  }
 
   return (
     <main>
@@ -102,9 +111,79 @@ const LandingPage = () => {
         </a>
       </section>
 
-      <section id="ABOUTME">
-        {/* <SkillsSection /> */}
+      <section id="PROJECTS">
+        <div className="row">
+          <div className="h-screen flex items-center justify-center mt-12">
+            <div className="w-[70%]">
+              <p>Featured Work</p>
+              {projects.map((project, index) => {
+                return <Project project={project} key={index} />;
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="Skills" className="bg-[#000000] p-20">
+        <div>
+          <H1>Skills</H1>
+        </div>
+        <div className="flex flex-col gap-8">
+          <div className="grid grid-cols-5 gap-6">
+            {teckStack.slice(0, 5).map((item, index) => (
+              <motion.div
+                initial={{ opacity: 0  , y: -100 }}
+                animate={{ opacity : 1 ,y: 0, }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.9, delay: 0.5}}
+                className="w-full"
+                key={index}
+              >
+                <img src={item} alt="" className="w-[130px] mx-auto" />
+              </motion.div>
+            ))}
+          </div>
+          <div className="grid grid-cols-4 cursor-pointer">
+            {teckStack.slice(5, 9).map((item, index) => (
+              <motion.div
+                initial={{ y: -100 , opacity: 0,  }}
+                animate={{ y : 0 , opacity: 1, }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.8,delay: 0.7 }}
+                className="w-full"
+                key={index}
+              >
+                <img src={item} className="w-[130px] mx-auto" alt="" />
+              </motion.div>
+            ))}
+          </div>
+          <div className="grid grid-cols-4">
+            {teckStack
+              .slice(9)
+
+              .map((item, index) => (
+                <motion.div
+                  initial={{ y: -100 , opacity: 0,  }}
+                  animate={{ y : 0 , opacity: 1, }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.7, delay: 1 }}
+                
+                  className="w-full"
+                  key={index}
+                >
+                  <img src={item} className="w-[130px] mx-auto" alt="" />
+                </motion.div>
+              ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="ABOUTME">  
         <header className={styles.main}>
+        <h1 className="text-[150px] text-center tracking-wider font-bold ">About ME</h1>
           <motion.div
             className={styles.mask}
             animate={{
@@ -134,35 +213,6 @@ const LandingPage = () => {
             </p>
           </div>
         </header>
-      </section>
-
-      <section id="PROJECTS">
-        <div className="row">
-          <div className="h-screen flex items-center justify-center mt-12">
-            <div className="w-[70%]">
-              <p>Featured Work</p>
-              {projects.map((project, index) => {
-                return <Project project={project} key={index} />;
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="Skills" className="bg-[#1b191d]">
-        <div className="row">
-          <div className="flex items-center justify-center">
-            {skillsInfo.map((items : Skillsmap , index) => (
-              <Skill
-                key={index}
-                title={items.title}
-                description={items.description}
-                icon2={items.icon2}
-                icon={items.icon}
-              />
-            ))}
-          </div>
-        </div>
       </section>
     </main>
   );

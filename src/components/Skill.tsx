@@ -10,15 +10,11 @@ interface SkillProps {
 
 const Skill = ({ title, description, icon2 , icon}: SkillProps) => {
   return (
-    <div className="border-2 border-white text-white p-8 mt-11 flex flex-col gap-4 items-center">
-      <div className="flex items-center justify-start">
-        <LottiePlayer
-          animationData={icon}
-          loop
-          play
-          className="lg:w-[100px] w-[350px]"
-        />
-        <h2>{title}</h2>
+    <div className="border-2 border-white text-[#fff] p-[20px] mt-11 flex flex-col gap-8 items-start lg:flex lg:w-1/3">
+      <div className="flex items-center gap-8">
+        <img src={icon} alt=""  className="w-12"/>
+        <h2 className="h2-underline">{title}
+        </h2>
       </div>
 
       <div className="flex items-center line ">

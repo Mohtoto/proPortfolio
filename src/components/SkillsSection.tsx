@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import * as animationData from "../../animmmm.json"; // Import your animation JSON file
+// import * as animationData from "../../animmmm.json"; // Import your animation JSON file
 import LottiePlayer from "react-lottie-player";
 import { Section } from "../shared/Section";
 import useMediaQuery from "../hooks/UseMediaQuery";

@@ -30,16 +30,9 @@ body{
 
 }
 
-
-
-/* #Skills{
-  background: rgb(37,37,47);
-  background: linear-gradient(90deg, rgba(37,37,47,1) 0%, rgba(37,35,44,1) 35%, rgba(32,34,43,1) 100%);
-} */
-
 #ABOUTME{
 
-  background-color: #010101
+  background-color: whitesmoke;
 }
 .row{
 
@@ -56,7 +49,8 @@ body{
 }
 #HOME{
 
-  background: url('https://images.unsplash.com/photo-1626947466156-cc845e20d93c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');
+  /* background: url('https://cdn.discordapp.com/attachments/757147113695215649/1165107019670364261/dizaster007_dark_gradient_background_with_one_3d_object_in_the__00ec1e4a-d716-4f2e-bf04-62dbe8f3cef2.png?ex=6545a578&is=65333078&hm=66345931b46236d6a4ea88463178a744e8ab4f995929598129e42a639e39257f&'); */
+  background: url('https://tympanus.net/Development/SlideshowAnimations/img/50.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -265,6 +259,25 @@ body{
   left: 17px;
 }
 
+.h2-underline{
+
+  z-index: 0;
+  position: relative;
+  color: white;
+}
+
+.h2-underline::after{
+
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  bottom: 13.5%;
+  z-index: -1;
+  height: 0.3em;
+  width: 104%;
+  left: -1%;
+  background: linear-gradient(65deg, #2C49D8 0%, #2C49D8 100%, rgba(255, 209, 0, 0) 100%);
+}
 
 @keyframes scroll {
 

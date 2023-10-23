@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import {motion} from 'framer-motion'
 
 
 interface Props {
@@ -7,9 +8,13 @@ interface Props {
 
 export const H1 = (props: Props) => {
   return (
-    <h1 className="h1 text-center">
+    <motion.h1 
+      initial={{ y : -100 , opacity:0}}
+      animate={{ y: 0 , opacity: 1}}
+      transition={{ duration : 0.5}}
+    className="h1 text-center">
         {props.children}
-    </h1>
+    </motion.h1>
   )
 }
 
