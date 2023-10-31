@@ -11,9 +11,8 @@ import geegle from "../../public/geegle.png";
 import lib from "../../public/lib.png";
 import nbakr from "../../public/nbakr.png";
 import tweet from "../../public/tweet.png";
-import { skillsInfo } from "../../data";
-import Skill from "./Skill";
 import { teckStack } from "../../data";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   interface Projects {
@@ -23,14 +22,8 @@ const LandingPage = () => {
     link: string;
   }
 
-  interface Skillsmap {
-    icon: any;
-    title: string;
-    description: string;
-    icon2: any;
-  }
 
-  const projects: Projects[] = [
+  const projects: Array<Projects> = [
     {
       title1: "Gmail",
       title2: "Clone",
@@ -68,7 +61,7 @@ const LandingPage = () => {
 
   const { x, y } = useMousePosition();
 
-  const size = isHover ? 600 : 40;
+  const size = isHover ? 300 : 40;
 
   const rows = [];
   let start = 0;
@@ -124,7 +117,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="Skills" className="bg-[#000000] p-20">
+      <section id="SKILLS" className="bg-[#000000] p-20">
         <div>
           <H1>Skills</H1>
         </div>
@@ -132,11 +125,11 @@ const LandingPage = () => {
           <div className="grid grid-cols-5 gap-6">
             {teckStack.slice(0, 5).map((item, index) => (
               <motion.div
-                initial={{ opacity: 0  , y: -100 }}
-                animate={{ opacity : 1 ,y: 0, }}
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.9, delay: 0.5}}
+                transition={{ duration: 0.9, delay: 0.5 }}
                 className="w-full"
                 key={index}
               >
@@ -147,11 +140,11 @@ const LandingPage = () => {
           <div className="grid grid-cols-4 cursor-pointer">
             {teckStack.slice(5, 9).map((item, index) => (
               <motion.div
-                initial={{ y: -100 , opacity: 0,  }}
-                animate={{ y : 0 , opacity: 1, }}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.8,delay: 0.7 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
                 className="w-full"
                 key={index}
               >
@@ -165,12 +158,11 @@ const LandingPage = () => {
 
               .map((item, index) => (
                 <motion.div
-                  initial={{ y: -100 , opacity: 0,  }}
-                  animate={{ y : 0 , opacity: 1, }}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.7, delay: 1 }}
-                
                   className="w-full"
                   key={index}
                 >
@@ -181,9 +173,11 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section id="ABOUTME">  
+      <section id="ABOUTME">
         <header className={styles.main}>
-        <h1 className="text-[150px] text-center tracking-wider font-bold ">About ME</h1>
+          <h1 className="text-[150px] text-center tracking-wider font-bold ">
+            About ME
+          </h1>
           <motion.div
             className={styles.mask}
             animate={{
@@ -214,6 +208,8 @@ const LandingPage = () => {
           </div>
         </header>
       </section>
+
+      <Footer />
     </main>
   );
 };

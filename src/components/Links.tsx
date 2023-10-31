@@ -1,37 +1,32 @@
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
-
 export const Links = () => {
-
-const location = useLocation()
-  
-
+  const location = useLocation();
 
   const MenuItems = [
-
     {
-      tile:"HOME",
-      anchor:'#HOME'
-
+      tile: "HOME",
+      anchor: "#HOME",
     },
     {
-      tile:"ABOUT ME",
-      anchor:'#ABOUTME'
-
+      tile: "ABOUT ME",
+      anchor: "#ABOUTME",
     },
     {
-      tile:"PROJECTS",
-      anchor:'#PROJECTS'
-
+      tile: "PROJECTS",
+      anchor: "#PROJECTS",
     },
     {
-      tile:"CONTACT ME",
-      anchor:'#CONTACT'
-
+      tile: "CONTACT ME",
+      anchor: "#CONTACT",
     },
 
-  ]
+    {
+      title: "SKILLS",
+      anchor: "#SKILLS",
+    },
+  ];
 
   const variants = {
     open: {
@@ -63,12 +58,13 @@ const location = useLocation()
     >
       {MenuItems.map((item, _) => (
         <motion.a
-          className={`text-[40px] ${location.hash === item.anchor ? 'text-[#ec4e39]' : 'text-black '}`}
+          className={`text-[40px] ${
+            location.hash === item.anchor ? "text-[#ec4e39]" : "text-black "
+          }`}
           href={`${item.anchor}`}
           variants={ItemVariants}
-          whileHover={{scale: 1.1}}
+          whileHover={{ scale: 1.1 }}
           key={_}
-
         >
           {item.tile}
         </motion.a>
