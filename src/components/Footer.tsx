@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <main className={styles.main}>
-        <p className="text-[#494136]">Made with Framer Motion:</p>
+        <p className="text-[#494136]">Made by Mohammad Totonchy</p>
 
        
           <div className={styles.container}>

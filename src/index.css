@@ -24,9 +24,12 @@ body {
   overflow-x: hidden;
 }
 
-#ABOUTME {
-  background-color: whitesmoke;
+.border-top{
+
+  border-top: 2px solid white;
+
 }
+
 .row {
   width: 100%;
   max-width: 1200px;

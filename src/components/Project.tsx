@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from '../../scssModules/Style.module.scss';
 import { motion} from 'framer-motion'
+
 interface ProjectProps {
     project: {
       title1: string;
