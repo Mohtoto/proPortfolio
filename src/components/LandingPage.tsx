@@ -97,7 +97,7 @@ const LandingPage = () => {
         <div className="row">
           <div className="h-screen flex items-center justify-center">
             <div className="w-[70%]">
-              <p>Featured Work</p>
+              <p className="text-[24px] m-0 text-white">Featured Work</p>
               {projects.map((project, index) => {
                 return <Project project={project} key={index} />;
               })}
@@ -187,12 +187,16 @@ const LandingPage = () => {
             </p>
           </motion.div>
 
-          <div className={styles.body}>
-            <p>
-              I'm a <span>selectively skilled</span> product designer with
-              strong focus on producing high quality & impactful digital
-              experience.
-            </p>
+          
+          <div className={`${styles.body}`}>
+            <div>
+            <h1 className="text-[24px] mt-12 text-white">About me</h1>
+              <p className="border-top">
+                I'm a <span>selectively skilled</span> product designer with
+                strong focus on producing high quality & impactful digital
+                experience.
+              </p>
+            </div>
           </div>
         </header>
       </section>
