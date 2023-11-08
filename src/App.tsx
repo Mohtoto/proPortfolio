@@ -3,24 +3,27 @@ import { useEffect, useState } from "react";
 import LandingPage from "./components/LandingPage";
 import PreLoader from "./components/PreLoader";
 import { BrowserRouter as Router } from "react-router-dom";
+// import Sentpage from "./components/Sentpage";
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
-  //     // const locomotiveScroll = new LocomotiveScroll();
+      const locomotiveScroll = new LocomotiveScroll();
 
-  //     setTimeout(() => {
-  //       setIsLoading(false);
+      locomotiveScroll.update()
 
-  //       document.body.style.cursor = "default";
+      setTimeout(() => {
+        setIsLoading(false);
 
-  //       window.scrollTo(0, 0);
-  //     }, 2000);
-  //   })();
-  // }, []);
+        document.body.style.cursor = "default";
+
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
 
   return (
     <>
@@ -32,6 +35,10 @@ const App = () => {
         <AnimatePresence mode="wait">
           {isLoading && <PreLoader />}
         </AnimatePresence>
+
+        {/* <Routes>
+          <Route path="Confirmation" element={<Sentpage />}  />
+        </Routes> */}
       </Router>
     </>
   );

@@ -4,28 +4,34 @@ import { useLocation } from "react-router-dom";
 export const Links = () => {
   const location = useLocation();
 
-  const MenuItems = [
+  interface MenuItems {
+
+    title:string;
+    anchor:string;
+  }
+
+  const MenuItems : Array<MenuItems> = [
     {
-      tile: "HOME",
+      title: "HOME",
       anchor: "#HOME",
     },
     {
-      tile: "ABOUT ME",
-      anchor: "#ABOUTME",
-    },
-    {
-      tile: "PROJECTS",
+      title: "PROJECTS",
       anchor: "#PROJECTS",
     },
-    {
-      tile: "CONTACT ME",
-      anchor: "#CONTACT",
-    },
-
     {
       title: "SKILLS",
       anchor: "#SKILLS",
     },
+    {
+      title: "ABOUT ME",
+      anchor: "#ABOUTME",
+    },
+    {
+      title: "CONTACT ME",
+      anchor: "#CONTACT",
+    },
+
   ];
 
   const variants = {
@@ -66,7 +72,7 @@ export const Links = () => {
           whileHover={{ scale: 1.1 }}
           key={_}
         >
-          {item.tile}
+          {item.title}
         </motion.a>
       ))}
     </motion.div>
