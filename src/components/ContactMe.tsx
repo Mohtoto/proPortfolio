@@ -14,11 +14,14 @@ const ContactMe = () => {
   return (
     <div id="CONTACT" className=" min-h-screen flex items-center justify-center">
       <div className="row">
-        <p className="text-[24px] m-0 text-black">Contact Me</p>
-        <div className="w-full border-top-black">
-            <div className="flex items-center justify-center p-12">
+        <p className="text-[24px] m-0 text-black text-center md:text-left">Contact Me</p>
+        <div className="border-top-black">
+
+       
+        <div className="w-full">
+            <div className="flex flex-col items-center justify-center md:p-12 md:flex-row">
               {/* left side */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <form
                   method="POST"
                   action="https://formsubmit.co/mohtotonchy@gmail.com"
@@ -78,9 +81,10 @@ const ContactMe = () => {
               {/* right side */}
 
               <div className="w-1/2">
-                <LottiePlayer animationData={icon} loop play className="" />
+                <LottiePlayer animationData={icon} loop play/>
               </div>
             </div>
+        </div>
         </div>
       </div>
     </div>

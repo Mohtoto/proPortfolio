@@ -91,18 +91,72 @@ export const projects: Array<Projects> = [
 ];
 
 
-export const teckStack = [
-  react,
-  node,
-  express,
-  mongodb,
-  sql,
-  html,
-  css,
-  javascript,
-  typescript,
-  tailwindcss,
-  sass,
-  github,
-  firebase,
+export const teckStack = [ 
+  
+{
+  image: react,
+  progress: 100
+
+},
+  {
+  image: node,
+  progress: 90
+
+},
+  {
+  image: express,
+  progress: 80
+
+},
+  {
+  image: mongodb,
+  progress: 70
+
+},
+  {
+  image: sql,
+  progress: 70
+
+},
+  {
+  image: html,
+  progress: 100
+
+},
+  {
+  image: css,
+  progress: 100
+
+},
+  {
+  image: javascript,
+  progress: 90
+
+},
+  {
+  image: typescript,
+  progress: 80
+
+},
+ {
+  image: tailwindcss,
+  progress: 100
+
+},
+  {
+  image: sass,
+  progress: 100
+
+},
+  {
+  image: github,
+  progress: 100
+
+},
+  {
+  image: firebase,
+  progress: 90
+
+},
 ];
+

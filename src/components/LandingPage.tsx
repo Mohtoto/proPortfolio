@@ -6,15 +6,40 @@ import Skills from "./Skills";
 import Aboutme from "./Aboutme";
 import Projects from "./Projects";
 import ContactMe from "./ContactMe";
+import LottiePlayer from "react-lottie-player";
+import * as icon from "../assets/top.json";
+import { useEffect, useState } from "react";
 
 const LandingPage = () => {
   const aboveMedia = useMediaQuery("(min-width: 767px)");
+
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Function to handle scroll event
+    const handleScroll = () => {
+      // Calculate the scroll position
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      // Set the visibility based on the scroll position
+      setIsVisible(scrollY > 500); // You can adjust the value (100) based on when you want the component to appear
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array ensures that this effect runs once after the initial render
 
   return (
     <main>
       <section id="HOME" className="h-[100vh] relative">
         <NavBar />
         {/* <NavBullets/> */}
+
         <div className="row">
           <div className="flex flex-col gap-20 w-full items-center justify-center h-[100vh]">
             <div className="flex flex-col gap-8">
@@ -39,6 +64,12 @@ const LandingPage = () => {
         >
           <div className="scroll__icon"></div>
         </a>
+
+        {isVisible && (
+          <a href="#HOME" className=" fixed right-0 bottom-0 p-8">
+            <LottiePlayer animationData={icon} loop play className="w-[60px] transition duration-300 ease-in-out" />
+          </a>
+        )}
       </section>
 
       <Projects />

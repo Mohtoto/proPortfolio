@@ -1,65 +1,46 @@
 import { motion } from "framer-motion";
 
 import { teckStack } from "../../data";
+import { Section } from "../shared/Section";
+import Skill from "./Skill";
 
 const Skills = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration:1,
-      
-        staggerChildren: 0.1,
-        
-      },
-    },
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
-
-
- 
   return (
-    <section id="SKILLS" className=" bg-[#dbdada] p-20 min-h-screen">
+    <section id="SKILLS" className="snap-start">
       <div className="row">
-        <div className="flex flex-col justify-center">
-          <h1 className="text-[24px] m-0 text-black">Skills</h1>
-          <motion.div
-            className="flex flex-col gap-8 border-top-black"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.div className="grid grid-cols-5 mt-12" variants={containerVariants}>
-              {teckStack.slice(0, 5).map((item, index) => (
-                <motion.div className="w-full" key={index} variants={itemVariants}>
-                  <img src={item} alt="" className="w-[130px] mx-auto" />
-                </motion.div>
-              ))}
-            </motion.div>
-            <motion.div className="grid grid-cols-4 cursor-pointer" variants={containerVariants}>
-              {teckStack.slice(5, 9).map((item, index) => (
-                <motion.div className="w-full" key={index} variants={itemVariants}>
-                  <img src={item} className="w-[130px] mx-auto" alt="" />
-                </motion.div>
-              ))}
-            </motion.div>
-            <motion.div className="grid grid-cols-4" variants={containerVariants}>
-              {teckStack.slice(9).map((item, index) => (
-                <motion.div className="w-full" key={index} variants={itemVariants}>
-                  <img src={item} className="w-[130px] mx-auto" alt="" />
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="h-screen flex relative flex-col text-center md:text-left md:flex-row  md:px-10 min-h-screen justify-center md:space-y-0 mx-auto items-center"
+        >
+          <div>
+            <h1 className="text-[24px] m-0 text-black">Skills</h1>
+            <div className="border-top-black mb-12">
+              <div className="grid grid-cols-4 gap-5 mt-12">
+                {teckStack.slice(0, teckStack.length / 2).map((item, index) => (
+                  <Skill
+                    item={item.image}
+                    progress={item.progress}
+                    key={index}
+                  />
+                ))}
+
+                {teckStack
+                  .slice(teckStack.length / 2, teckStack.length)
+                  .map((item, index) => (
+                    <Skill
+                      item={item.image}
+                      progress={item.progress}
+                      key={index}
+                      directionLeft
+                    />
+                  ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
