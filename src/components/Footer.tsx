@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="text-[#494136]">Made by Mohammad Totonchy</p>
 
        
-          <div className={styles.container}>
+          <div className={`${styles.container} flex flex-col gap-0 md:flex-row`}>
           <Framer>
             <svg
               id="Layer_2"

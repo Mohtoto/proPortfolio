@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import LottiePlayer from "react-lottie-player";
-import * as icon from "../../send.json";
+import * as icon from "../../sent.json";
 // import Sentpage from "./Sentpage";
 const ContactMe = () => {
 
@@ -10,22 +10,22 @@ const ContactMe = () => {
   } = useForm();
 
   const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
-  px-5 py-3 placeholder-grey placeholder:opacity-50`;
+  px-5 py-3 placeholder-grey placeholder:opacity-50 text-black`;
   return (
-    <div id="CONTACT" className=" min-h-screen flex items-center justify-center">
+    <div id="CONTACT" className=" min-h-screen flex items-center justify-center bg-black text-white">
       <div className="row">
-        <p className="text-[24px] m-0 text-black text-center md:text-left">Contact Me</p>
-        <div className="border-top-black">
+        <p className="text-[24px] m-0 text-center md:text-left">Contact Me</p>
+        <div className="border-top">
 
        
-        <div className="w-full">
+        <div className="w-full text-white">
             <div className="flex flex-col items-center justify-center md:p-12 md:flex-row">
               {/* left side */}
               <div className="md:w-1/2">
                 <form
                   method="POST"
                   action="https://formsubmit.co/mohtotonchy@gmail.com"
-                  className="mt-[50px]"
+                  className="mt-[50px] text-white"
                 >
                   <div className="w-[350px]">
                     <label>
@@ -69,7 +69,7 @@ const ContactMe = () => {
 
                   <button
                     type="submit"
-                    className=" uppercase w-[350px] bg-[#4965E9] hover:bg-brown-700 text-white font-bold py-3 px-4 rounded-lg"
+                    className=" uppercase w-[350px] bg-[#ec4e39] hover:bg-brown-700 text-white font-bold py-3 px-4 rounded-lg"
                   >
                     submit
                   </button>
@@ -80,8 +80,8 @@ const ContactMe = () => {
 
               {/* right side */}
 
-              <div className="w-1/2">
-                <LottiePlayer animationData={icon} loop play/>
+              <div className="w-1/2 flex items-center justify-center">
+                <LottiePlayer animationData={icon} loop play className="w-[350px] object-contain"/>
               </div>
             </div>
         </div>

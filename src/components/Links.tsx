@@ -12,23 +12,23 @@ export const Links = () => {
 
   const MenuItems : Array<MenuItems> = [
     {
-      title: "HOME",
+      title: "HOME.",
       anchor: "#HOME",
     },
     {
-      title: "PROJECTS",
+      title: "PROJECTS.",
       anchor: "#PROJECTS",
     },
     {
-      title: "SKILLS",
+      title: "SKILLS.",
       anchor: "#SKILLS",
     },
     {
-      title: "ABOUT ME",
-      anchor: "#ABOUTME",
+      title: "EXPERIENCE.",
+      anchor: "#EXPERIENCE",
     },
     {
-      title: "CONTACT ME",
+      title: "CONTACT ME.",
       anchor: "#CONTACT",
     },
 

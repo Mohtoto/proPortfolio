@@ -15,7 +15,7 @@ const Skill = ({ directionLeft , item , progress }: Props) => {
         initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="rounded-full border  border-gray object-cover w-24 h-24 xl:w-24 xl:h-24 filter group-hover:grayscale "
+        className="rounded-full border  border-gray object-cover w-24 h-24 xl:w-24 xl:h-24 filter group-hover:grayscale p-4"
         src={item}
       />
 

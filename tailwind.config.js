@@ -7,15 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bggradient': {
-          'start': '#4831d4',
-          'end': '#ccf381',
+        gray: {
+          200: "#D5DAE1"
         },
-        'second': '#47019d',
-        'three': '#e00256',
-        'black': '#212121',
-        'white': '#ffffff',
-        'gray': '#808080e2'
+        black: {
+          DEFAULT: "#000",
+          500: "#1D2235"
+        },
+        blue: {
+          500: "#2b77e7"
+        }
+      },
+      boxShadow: {
+        card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
       }
     },
   },
