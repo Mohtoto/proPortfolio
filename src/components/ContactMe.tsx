@@ -3,22 +3,19 @@ import LottiePlayer from "react-lottie-player";
 import * as icon from "../../sent.json";
 // import Sentpage from "./Sentpage";
 const ContactMe = () => {
-
-
-  const {
-    register,
-  } = useForm();
+  const { register } = useForm();
 
   const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
   px-5 py-3 placeholder-grey placeholder:opacity-50 text-black`;
   return (
-    <div id="CONTACT" className=" min-h-screen flex items-center justify-center bg-black text-white">
+    <div
+      id="CONTACT"
+      className=" min-h-screen flex items-center justify-center bg-black text-white"
+    >
       <div className="row">
         <p className="text-[24px] m-0 text-center md:text-left">Contact Me</p>
         <div className="border-top">
-
-       
-        <div className="w-full text-white">
+          <div className="w-full text-white">
             <div className="flex flex-col items-center justify-center md:p-12 md:flex-row">
               {/* left side */}
               <div className="md:w-1/2">
@@ -73,18 +70,26 @@ const ContactMe = () => {
                   >
                     submit
                   </button>
-                  <input type="hidden" name="_next" value="http://localhost:5173/Confirmation"></input>
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="http://localhost:5173/Confirmation"
+                  ></input>
                 </form>
-
               </div>
 
               {/* right side */}
 
               <div className="w-1/2 flex items-center justify-center">
-                <LottiePlayer animationData={icon} loop play className="w-[350px] object-contain"/>
+                <LottiePlayer
+                  animationData={icon}
+                  loop
+                  play
+                  className="w-[350px] object-contain"
+                />
               </div>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     </div>

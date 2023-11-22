@@ -20,6 +20,11 @@ export default {
       },
       boxShadow: {
         card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
+      },
+      height: {
+        "screen-dynamic": "100dvh",
+        "screen-small": "100svh",
+        "screen-large": "100lvh"
       }
     },
   },
