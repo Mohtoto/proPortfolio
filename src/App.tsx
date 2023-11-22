@@ -1,11 +1,11 @@
 import { AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { useState } from "react";
 import LandingPage from "./components/LandingPage";
-import PreLoader from "./components/PreLoader";
+// import PreLoader from "./components/PreLoader";
 import { BrowserRouter as Router } from "react-router-dom";
 // import Sentpage from "./components/Sentpage";
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
   // useEffect(() => {
   //   (async () => {
@@ -32,9 +32,9 @@ const App = () => {
           <LandingPage />
         </AnimatePresence>
 
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {isLoading && <PreLoader />}
-        </AnimatePresence>
+        </AnimatePresence> */}
 
         {/* <Routes>
           <Route path="Confirmation" element={<Sentpage />}  />

@@ -23,7 +23,6 @@ import geegle from "./public/geegle.png";
 import lib from "./public/lib.png";
 import nbakr from "./public/nbakr.png";
 import tweet from "./public/tweet.png";
-import starbucks from './src/assets/images/starbucks.png'
 import versent from './src/assets/images/ver.png'
 import front from './src/assets/images/front.png'
 
