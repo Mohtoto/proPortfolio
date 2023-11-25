@@ -3,7 +3,7 @@ import Project from './Project';
 
 const Projects = () => {
   return (
-    <section id="PROJECTS" className="bg-black text-white">
+    <section id="PROJECTS" className="bg-black text-white  p-8">
     <div className="row">
     <p className="text-[24px] m-0 text-white">Featured Work</p>
 

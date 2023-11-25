@@ -5,12 +5,13 @@ const Footer = () => {
   return (
     <footer>
       <main className={styles.main}>
-        <p className="text-[#494136]">Made by Mohammad Totonchy</p>
 
        
-          <div className={`${styles.container} flex flex-col gap-0 md:flex-row`}>
+            <p className="text-[#494136]">Made by Mohammad Totonchy</p>
+          <div className={`${styles.container} flex gap-8 md:flex-row`}>
           <Framer>
-            <svg
+            <svg 
+              className="md:h-12 h-8"
               id="Layer_2"
               data-name="Layer 2"
               xmlns="http://www.w3.org/2000/svg"
@@ -22,6 +23,7 @@ const Footer = () => {
             </Framer>
             <Framer>
             <svg
+            className="md:h-12 h-8"
               id="Layer_2"
               data-name="Layer 2"
               xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +34,7 @@ const Footer = () => {
             </Framer>
             <Framer>
             <svg
+            className="md:h-12 h-8"
               id="Layer_2"
               data-name="Layer 2"
               xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +45,7 @@ const Footer = () => {
             </Framer>
             <Framer>
             <svg
+            className="md:h-12 h-8"
               id="Layer_2"
               data-name="Layer 2"
               xmlns="http://www.w3.org/2000/svg"

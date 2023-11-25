@@ -6,7 +6,7 @@ import { experiences } from "../../data";
 import "react-vertical-timeline-component/style.min.css";
 const Experience = () => {
   return (
-    <section id="EXPERIENCE"  className="py-17 bg-black min-h-screen">
+    <section id="EXPERIENCE"  className="py-17 bg-black min-h-screen p-8">
       <div className="row">
       <p className="text-[24px] m-0 text-center md:text-left text-white">Experience</p>
         <div className="flex flex-col gap-3 text-white border-top">

@@ -4,13 +4,14 @@ import Skill from "./Skill";
 
 const Skills = () => {
   return (
-    <section id="SKILLS" className="snap-start bg-black">
+    <section id="SKILLS" className="snap-start bg-black p-8">
       <div className="row">
       <h1 className="text-[24px] m-0 text-white">Skills</h1>
     
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          animate={{opacity : 1}}
+          viewport={{ once: true }}
           transition={{ duration: 1.5 }}
           className="h-screen flex relative flex-col text-center md:text-left md:flex-row  md:px-10 min-h-screen justify-center md:space-y-0 mx-auto items-center border-top"
         >

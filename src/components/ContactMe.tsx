@@ -10,13 +10,13 @@ const ContactMe = () => {
   return (
     <div
       id="CONTACT"
-      className=" min-h-screen flex items-center justify-center bg-black text-white"
+      className=" min-h-screen flex items-center justify-center bg-black text-white p-8"
     >
       <div className="row">
         <p className="text-[24px] m-0 text-center md:text-left">Contact Me</p>
         <div className="border-top">
           <div className="w-full text-white">
-            <div className="flex flex-col items-center justify-center md:p-12 md:flex-row">
+            <div className="flex flex-col items-center justify-center md:p-12 md:flex-row gap-8">
               {/* left side */}
               <div className="md:w-1/2">
                 <form

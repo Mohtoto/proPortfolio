@@ -110,12 +110,12 @@ const Home = () => {
               {aboveMedia ? (
                 <H1>MOHAMMAD TOTONCHY</H1>
               ) : (
-                <h1 className=" uppercase text-[20px] text-white text-center font-semibold">
+                <h1 className=" uppercase text-[50px] text-white text-center font-semibold">
                   MOHAMMAD TOTONCHY
                 </h1>
               )}
 
-              <h2 className="text-white text-[12px] lg:text-[22px] uppercase text-center tracking-widest font">
+              <h2 className="text-white text-[20px] lg:text-[22px] uppercase text-center tracking-widest font">
                 software engineer & front end developer.
               </h2>
             </div>
