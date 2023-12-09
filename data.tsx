@@ -18,7 +18,6 @@ import node from "./src/assets/node.svg";
 import css from "./src/assets/css.svg";
 import github from "./src/assets/guthub.svg";
 import firebase from "./src/assets/firebase.svg";
-import gam from "./public/gam.png";
 import geegle from "./public/geegle.png";
 import lib from "./public/lib.png";
 import nbakr from "./public/nbakr.png";

@@ -1,8 +1,6 @@
 import { projects } from "../../data";
-import useMediaQuery from "../hooks/UseMediaQuery";
 import Project from "./Project";
 const Projects = () => {
-  const aboveMedia = useMediaQuery("(min-width: 780px)");
   return (
     <section id="PROJECTS" className="bg-black text-white  p-8">
       <div className="row">

@@ -1,8 +1,6 @@
 import styles from "../../scssModules/page.module.scss";
 import Framer from "./framer";
 import pdf from '../assets/final.pdf'
-import { useEffect } from "react";
-
 
 const Footer = () => {
 
