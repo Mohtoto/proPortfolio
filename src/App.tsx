@@ -1,11 +1,11 @@
 import { AnimatePresence } from "framer-motion";
-// import { useState } from "react";
+import { useEffect, useState } from "react";
 import LandingPage from "./components/LandingPage";
-// import PreLoader from "./components/PreLoader";
-import { BrowserRouter as Router } from "react-router-dom";
-// import Sentpage from "./components/Sentpage";
+import PreLoader from "./components/PreLoader";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Sentpage from "./components/Sentpage";
 const App = () => {
-  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // useEffect(() => {
   //   (async () => {
@@ -13,7 +13,7 @@ const App = () => {
 
   //     const locomotiveScroll = new LocomotiveScroll();
 
-  //     locomotiveScroll.update()
+  //     locomotiveScroll.update();
 
   //     setTimeout(() => {
   //       setIsLoading(false);
@@ -27,19 +27,18 @@ const App = () => {
 
   return (
     <>
-      <Router>
-        <AnimatePresence>
-          <LandingPage />
-        </AnimatePresence>
+      {/* <AnimatePresence mode="wait">
+        {isLoading && <PreLoader />}
+      </AnimatePresence> */}
+      <AnimatePresence>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
 
-        {/* <AnimatePresence mode="wait">
-          {isLoading && <PreLoader />}
-        </AnimatePresence> */}
-
-        {/* <Routes>
-          <Route path="Confirmation" element={<Sentpage />}  />
-        </Routes> */}
-      </Router>
+            <Route path="Confirmation" element={<Sentpage />} />
+          </Routes>
+        </Router>
+      </AnimatePresence>
     </>
   );
 };

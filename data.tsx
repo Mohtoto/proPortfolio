@@ -22,6 +22,7 @@ import gam from "./public/gam.png";
 import geegle from "./public/geegle.png";
 import lib from "./public/lib.png";
 import nbakr from "./public/nbakr.png";
+import kat from "./public/kat.png";
 import tweet from "./public/tweet.png";
 import versent from './src/assets/images/ver.png'
 import front from './src/assets/images/front.png'
@@ -59,12 +60,13 @@ export const skillsInfo = [
 
 
 export const projects: Array<Projects> = [
-  {
-    title1: "Gmail",
-    title2: "Clone",
-    src: gam,
-    link: "https://jmaill.netlify.app/",
-  },
+  // {
+  //   title1: "Gmail",
+  //   title2: "Clone",
+  //   src: gam,
+  //   link: "https://jmaill.netlify.app/",
+  // },npm run dev
+  
   {
     title1: "E-com",
     title2: "Library",
@@ -78,8 +80,8 @@ export const projects: Array<Projects> = [
     link: "https://geegle.netlify.app/",
   },
   {
-    title1: "E-",
-    title2: "Portfoilio",
+    title1: "Advanced",
+    title2: "Portfolio",
     src: nbakr,
     link: "https://bakr-zeyad.netlify.app/",
   },
@@ -88,6 +90,12 @@ export const projects: Array<Projects> = [
     title2: "Clone",
     src: tweet,
     link: "https://tweeterr.netlify.app/",
+  },
+  {
+    title1: "Kat",
+    title2: "&Dog",
+    src: kat,
+    link: "https://katanddog.com.au/",
   },
 ];
 

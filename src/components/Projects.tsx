@@ -1,22 +1,25 @@
-import { projects } from '../../data';
-import Project from './Project';
-
+import { projects } from "../../data";
+import useMediaQuery from "../hooks/UseMediaQuery";
+import Project from "./Project";
 const Projects = () => {
+  const aboveMedia = useMediaQuery("(min-width: 780px)");
   return (
     <section id="PROJECTS" className="bg-black text-white  p-8">
-    <div className="row">
-    <p className="text-[24px] m-0 text-white">Featured Work</p>
-
-      <div className="h-screen flex items-center justify-center border-top">
-        <div className="w-[70%]">
-          {projects.map((project, index) => {
-            return <Project project={project} key={index} />;
-          })}
+      <div className="row">
+        <p className="text-[24px] m-0 text-white">Featured Work</p>
+        <div className="border-top"></div>
+        <div className=" h-screen flex flex-col">
+          <div className=" flex items-center justify-center h-screen">
+            <div className="w-[90%] md:w-[70%]">
+              {projects.map((project, index) => {
+                return <Project project={project} key={index} />;
+              })}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>  
-  )
-}
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;

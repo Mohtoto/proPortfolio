@@ -11,26 +11,21 @@
 }
 
 :root {
-  --background-Color: linear-gradient(90deg, #4831d4 67%, #ccf381 33%);
+  --background-Color: linear-gradient(90deg, #4831d4 90%, #ccf381 10%);
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
 }
-
 
 html {
   font-family: "Avant Garde Book BT";
   scroll-behavior: smooth;
 }
 
-.border-top{
-
+.border-top {
   border-top: 2px solid white;
-
 }
 
-
-.border-top-black{
-
+.border-top-black {
   border-top: 2px solid black;
   width: 100%;
 }
@@ -45,11 +40,12 @@ html {
   padding: 58px 0;
 }
 
-
 #HOME {
   /* background: url('https://cdn.discordapp.com/attachments/757147113695215649/1165107019670364261/dizaster007_dark_gradient_background_with_one_3d_object_in_the__00ec1e4a-d716-4f2e-bf04-62dbe8f3cef2.png?ex=6545a578&is=65333078&hm=66345931b46236d6a4ea88463178a744e8ab4f995929598129e42a639e39257f&'); */
+  background: url("https://tympanus.net/Development/SlideshowAnimations/img/50.jpg");
+
   /* background: url('https://media.discordapp.net/attachments/757147113695215649/1170286575075209247/dizaster007_rock_in_the_Swiss_Alps_cinematic_lighting_d1cd6d84-e99d-4d21-8e43-bc62c5c293f6.png?ex=65587d4e&is=6546084e&hm=63772b50e1997ab3403ea8cee0598be1a7dedd41e1650c4a4e52bbbbc2b7d164&=&width=2150&height=1228'); */
-  background: url("https://cdn.discordapp.com/attachments/757147113695215649/1170290097032265779/dizaster007_frontend_developer_background_cinematic_lighting_c6b079e2-a443-4bcd-9a72-06cd5f8586cc.png?ex=65588096&is=65460b96&hm=0d643697fdb8ca2f39d8c60cec3155d0244fced7302f1b36afb227597ae0dda2&");
+  /* background: url("https://cdn.discordapp.com/attachments/757147113695215649/1170290097032265779/dizaster007_frontend_developer_background_cinematic_lighting_c6b079e2-a443-4bcd-9a72-06cd5f8586cc.png?ex=65588096&is=65460b96&hm=0d643697fdb8ca2f39d8c60cec3155d0244fced7302f1b36afb227597ae0dda2&"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -59,14 +55,14 @@ html {
   width: 120px;
   height: auto;
   position: absolute;
-  right:70px;
+  right: 70px;
 
   top: 170px;
 }
 .mo-fire svg {
   width: 100%;
   height: auto;
-  position: relative
+  position: relative;
 }
 .flame {
   animation-name: flamefly;
@@ -80,7 +76,7 @@ html {
   animation-delay: 1s;
   animation-duration: 3s;
 }
-.flame3.two{
+.flame3.two {
   animation-duration: 5s;
   animation-delay: 1s;
 }
@@ -113,15 +109,15 @@ html {
 }
 @keyframes flameWobble {
   50% {
-    transform: scale(1,1.2) translate(0, -30px) rotate(-2deg);
+    transform: scale(1, 1.2) translate(0, -30px) rotate(-2deg);
   }
 }
 @keyframes flamefly {
-  0%{
+  0% {
     transform: translate(0) rotate(180deg);
   }
-   50% {
-     opacity: 1;
+  50% {
+    opacity: 1;
   }
   100% {
     transform: translate(-20px, -100px) rotate(180deg);
@@ -130,7 +126,8 @@ html {
 }
 
 @keyframes flame {
-  0%, 100% {
+  0%,
+  100% {
     transform: scaleY(1);
   }
   50% {
@@ -141,12 +138,18 @@ html {
 .fire {
   width: 50px;
   height: 100px;
-  background: linear-gradient(to bottom, #ff5733 0%, #ffbd69 20%, #ff5733 40%, #ffbd69 60%, #ff5733 80%, #ffbd69 100%);
+  background: linear-gradient(
+    to bottom,
+    #ff5733 0%,
+    #ffbd69 20%,
+    #ff5733 40%,
+    #ffbd69 60%,
+    #ff5733 80%,
+    #ffbd69 100%
+  );
   border-radius: 10px;
   animation: flame 1s infinite;
 }
-
-
 
 ::-moz-selection {
   background: #ec4e39;
@@ -284,9 +287,17 @@ html {
 
 
 } */
+@keyframes scroll {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+}
 
 .scroll__icon {
-  content: "";
   width: 7px;
   height: 10px;
   background-color: white;
@@ -344,39 +355,41 @@ html {
   );
 }
 
-.nabbutton{
-
+.nabbutton {
   width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: inherit;
-    cursor: pointer;
-    min-height: 2em;
-    position: relative;
-    color: currentColor;
-    -webkit-transition-delay: 100ms;
-    transition-delay: 100ms;
-    outline-color: transparent;
-    background-color: transparent;
-    -webkit-tap-highlight-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  cursor: pointer;
+  min-height: 2em;
+  position: relative;
+  color: currentColor;
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+  outline-color: transparent;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.nabbutton:after{
-
-    content: '';
-    width: 100%;
-    height: 0.523em;
-    position: absolute;
-    background-color: currentColor;
-    border: 1px solid currentColor;
-    -webkit-transition: -webkit-transform 0.2s 100ms;
-    -webkit-transition: transform 0.2s 100ms;
-    transition: transform 0.2s 100ms;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+.nabbutton:after {
+  content: "";
+  width: 100%;
+  height: 0.523em;
+  position: absolute;
+  background-color: currentColor;
+  border: 1px solid currentColor;
+  -webkit-transition: -webkit-transform 0.2s 100ms;
+  -webkit-transition: transform 0.2s 100ms;
+  transition: transform 0.2s 100ms;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
+.background-Color{
+
+  background: var(--background-Color);
+}
 
