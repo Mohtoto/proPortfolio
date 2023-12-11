@@ -16,6 +16,10 @@
   --green-rgb: 125 161 35;
 }
 
+body{
+
+  overflow-x: hidden;
+}
 html {
   font-family: "Avant Garde Book BT";
   scroll-behavior: smooth;

@@ -10,8 +10,7 @@ const Skills = () => {
     
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{opacity : 1}}
-          viewport={{ once: true }}
+          whileInView={{opacity : 1}}
           transition={{ duration: 1.5 }}
           className="h-screen flex relative flex-col text-center md:text-left md:flex-row  md:px-10 min-h-screen justify-center md:space-y-0 mx-auto items-center border-top"
         >

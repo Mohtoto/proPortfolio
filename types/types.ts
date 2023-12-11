@@ -10,7 +10,7 @@ export interface Projects {
 
 export interface teckStack {
 
-    image : React.ReactNode;
+    image : string;
     progress:number;
 }
 

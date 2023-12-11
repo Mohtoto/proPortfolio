@@ -22,7 +22,7 @@ export default function Project({ project}: ProjectProps) {
 
     const { title1, title2, src , link } = project;
     return (
-        <div onMouseEnter={() => {setIsActive(true)}} onMouseLeave={() => {setIsActive(false)}} className={styles.project}>
+        <div  onMouseEnter={() => {setIsActive(true)}} onMouseLeave={() => {setIsActive(false)}} className={styles.project}>
             <p>{title1}</p>
             <motion.div variants={anim} animate={isActive ? "open" : "closed"} className={styles.imgContainer}>
                 <a href={`${link}`} target='_blank'><img src={`${src}`}></img></a>

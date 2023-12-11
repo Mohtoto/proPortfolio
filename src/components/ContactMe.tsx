@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import LottiePlayer from "react-lottie-player";
 import * as icon from "../../sent.json";
-// import Sentpage from "./Sentpage";
+import { motion} from 'framer-motion'
 const ContactMe = () => {
   const { register } = useForm();
 
@@ -18,7 +18,12 @@ const ContactMe = () => {
           <div className="w-full text-white">
             <div className="flex flex-col items-center justify-center md:p-12 md:flex-row gap-8">
               {/* left side */}
-              <div className="md:w-1/2">
+              <motion.div
+               initial={{ x: -400 , opacity: 0 }}
+               whileInView={{x: 0 , opacity : 1}}
+               transition={{ duration: 0.6 }}
+               viewport={{once : true}}
+                className="md:w-1/2">
                 <form
                   method="POST"
                   action="https://formsubmit.co/mohtotonchy@gmail.com"
@@ -76,18 +81,23 @@ const ContactMe = () => {
                     value="http://localhost:5173/Confirmation"
                   ></input>
                 </form>
-              </div>
+              </motion.div>
 
               {/* right side */}
 
-              <div className="w-1/2 flex items-center justify-center">
+              <motion.div
+               initial={{ x: 400 , opacity: 0 }}
+               whileInView={{x: 0 , opacity : 1}}
+               transition={{ duration: 0.5 }}
+               viewport={{once : true}}
+              className="w-1/2 flex items-center justify-center">
                 <LottiePlayer
                   animationData={icon}
                   loop
                   play
                   className="w-[350px] object-contain"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

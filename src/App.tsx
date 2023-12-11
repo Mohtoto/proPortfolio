@@ -5,31 +5,32 @@ import PreLoader from "./components/PreLoader";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sentpage from "./components/Sentpage";
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
 
-      const locomotiveScroll = new LocomotiveScroll();
+  // useEffect(() => {
+  //   (async () => {
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
-      locomotiveScroll.update();
+  //     const locomotiveScroll = new LocomotiveScroll();
 
-      setTimeout(() => {
-        setIsLoading(false);
+  //     locomotiveScroll.update();
 
-        document.body.style.cursor = "default";
+  //     setTimeout(() => {
+  //       setIsLoading(false);
 
-        window.scrollTo(0, 0);
-      }, 2000);
-    })();
-  }, []);
+  //       document.body.style.cursor = "default";
+
+  //       window.scrollTo(0, 0);
+  //     }, 2000);
+  //   })();
+  // }, []);
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {isLoading && <PreLoader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <AnimatePresence>
         <Router>
           <Routes>
