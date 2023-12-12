@@ -4,7 +4,6 @@ import NavBar from "./NavBar";
 import LottiePlayer from "react-lottie-player";
 import * as icon from "../assets/top.json";
 import { H1 } from "../shared/H1";
-import { motion } from "framer-motion";
 
 const Home = () => {
   const aboveMedia = useMediaQuery("(min-width: 780px)");
