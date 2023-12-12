@@ -9,9 +9,9 @@ const Skills = () => {
       <h1 className="text-[24px] m-0 text-white">Skills</h1>
     
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{opacity : 1}}
-          transition={{ duration: 1.5 }}
+          // initial={{ opacity: 0 }}
+          // whileInView={{opacity : 1}}
+          // transition={{ duration: 1.5 }}
           className="h-screen flex relative flex-col text-center md:text-left md:flex-row  md:px-10 min-h-screen justify-center md:space-y-0 mx-auto items-center border-top"
         >
           <div>

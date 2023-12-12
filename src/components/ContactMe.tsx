@@ -19,10 +19,10 @@ const ContactMe = () => {
             <div className="flex flex-col items-center justify-center md:p-12 md:flex-row gap-8">
               {/* left side */}
               <motion.div
-               initial={{ x: -400 , opacity: 0 }}
-               whileInView={{x: 0 , opacity : 1}}
-               transition={{ duration: 0.6 }}
-               viewport={{once : true}}
+              //  initial={{ x: -400 , opacity: 0 }}
+              //  whileInView={{x: 0 , opacity : 1}}
+              //  transition={{ duration: 0.6 }}
+              //  viewport={{once : true}}
                 className="md:w-1/2">
                 <form
                   method="POST"
@@ -86,10 +86,10 @@ const ContactMe = () => {
               {/* right side */}
 
               <motion.div
-               initial={{ x: 400 , opacity: 0 }}
-               whileInView={{x: 0 , opacity : 1}}
-               transition={{ duration: 0.5 }}
-               viewport={{once : true}}
+              //  initial={{ x: 400 , opacity: 0 }}
+              //  whileInView={{x: 0 , opacity : 1}}
+              //  transition={{ duration: 0.5 }}
+              //  viewport={{once : true}}
               className="w-1/2 flex items-center justify-center">
                 <LottiePlayer
                   animationData={icon}

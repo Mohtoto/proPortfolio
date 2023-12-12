@@ -8,7 +8,7 @@ import { H1 } from "../shared/H1";
 const Home = () => {
   const aboveMedia = useMediaQuery("(min-width: 780px)");
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<any>(false);
 
   useEffect(() => {
     // Function to handle scroll event
