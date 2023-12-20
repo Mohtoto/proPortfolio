@@ -8,14 +8,14 @@ type Props = {
 
 
 
-const Skill = ({ directionLeft , item , progress }: Props) => {
+const Skill = ({  item , progress }: Props) => {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
-        initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
-        transition={{ duration: 1 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{once: true}}
+        // initial={{ x: directionLeft ? -200 : 200, opacity: 0 }}
+        // transition={{ duration: 1 }}
+        // whileInView={{ opacity: 1, x: 0 }}
+        // viewport={{once: true}}
         className="rounded-full border  border-gray object-cover w-18 h-18 md:w-24 md:h-24 filter group-hover:grayscale p-4 duration-300 ease-in-out"
         src={item}
       />
