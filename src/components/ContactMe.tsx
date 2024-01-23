@@ -10,7 +10,7 @@ const ContactMe = () => {
   return (
     <div
       id="CONTACT"
-      className=" min-h-screen flex items-center justify-center bg-black text-white p-8"
+      className=" min-h-screen flex items-center justify-center bg-[url('./assets/download.png')] text-white p-8"
     >
       <div className="row">
         <p className="text-[24px] m-0 text-center md:text-left">Contact Me</p>

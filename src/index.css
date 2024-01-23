@@ -11,7 +11,7 @@
 }
 
 :root {
-  --background-Color: linear-gradient(90deg, #4831d4 90%, #ccf381 10%);
+  --background-Color: linear-gradient(90deg, #4831d4 90%, #EC4E39 10%);
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
 }
@@ -46,8 +46,8 @@ html {
 
 #HOME {
   /* background: url('https://cdn.discordapp.com/attachments/757147113695215649/1165107019670364261/dizaster007_dark_gradient_background_with_one_3d_object_in_the__00ec1e4a-d716-4f2e-bf04-62dbe8f3cef2.png?ex=6545a578&is=65333078&hm=66345931b46236d6a4ea88463178a744e8ab4f995929598129e42a639e39257f&'); */
-  background: url("https://tympanus.net/Development/SlideshowAnimations/img/50.jpg");
-
+  /* background: url("https://tympanus.net/Development/SlideshowAnimations/img/50.jpg"); */
+  background: url('./assets/download.png');
   /* background: url('https://media.discordapp.net/attachments/757147113695215649/1170286575075209247/dizaster007_rock_in_the_Swiss_Alps_cinematic_lighting_d1cd6d84-e99d-4d21-8e43-bc62c5c293f6.png?ex=65587d4e&is=6546084e&hm=63772b50e1997ab3403ea8cee0598be1a7dedd41e1650c4a4e52bbbbc2b7d164&=&width=2150&height=1228'); */
   /* background: url("https://cdn.discordapp.com/attachments/757147113695215649/1170290097032265779/dizaster007_frontend_developer_background_cinematic_lighting_c6b079e2-a443-4bcd-9a72-06cd5f8586cc.png?ex=65588096&is=65460b96&hm=0d643697fdb8ca2f39d8c60cec3155d0244fced7302f1b36afb227597ae0dda2&"); */
   background-repeat: no-repeat;

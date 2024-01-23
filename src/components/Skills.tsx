@@ -4,7 +4,7 @@ import Skill from "./Skill";
 
 const Skills = () => {
   return (
-    <section id="SKILLS" className="snap-start bg-black p-8">
+    <section id="SKILLS" className="snap-start bg-[url('./assets/download.png')] p-8">
       <div className="row">
       <h1 className="text-[24px] m-0 text-white">Skills</h1>
     
